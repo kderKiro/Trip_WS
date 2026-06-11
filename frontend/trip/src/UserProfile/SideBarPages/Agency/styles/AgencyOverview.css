@@ -1,0 +1,109 @@
+.Stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    overflow-x: auto;
+}
+
+.StatCard {
+    display: flex;
+    gap: 20px;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.StatCard .Icon {
+    font-size: 2em;
+    color: brown;
+    background-color: var(--SecbackgroundColor);
+    padding: 10px;
+    border-radius: var(--radius);
+    border: 2px solid var(--border)
+}
+
+.StatCard .Info {
+
+    margin: auto;
+}
+
+.StatCard h3 {
+    font-weight: 500;
+    text-align: center;
+    color: var(--Primary-Color);
+}
+
+.StatCard p {
+    text-align: center;
+}
+
+.StatCard .PChange>span {
+    color: green;
+}
+
+.StatCard .NChange>span {
+    color: red;
+}
+
+.StatNum {
+
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 1.8em;
+}
+
+.Money {
+    color: green;
+}
+
+
+/*Graph--------------------------------------------------------------*/
+
+.Graph {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+
+
+.Graph .GraphKeys {
+    height: 20%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+}
+.GraphKeys .Key {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.Graph .square{
+    width: 1.2em;
+    height: 1.2em;
+    border: solid 2px black;
+}
+
+
+@media screen and (max-width:1200px){
+    .Stats{
+        grid-template-columns:1fr 1fr ;
+    }
+}
+@media screen and (max-width:500px){
+    .Stats{
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,109 @@
+/* backend/Mohammed/Cars/css/PaymentForm.css */
+
+.paymentform-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 15px;
+}
+
+.paymentform-modal {
+  background: #fff;
+  padding: 30px;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  animation: slideIn 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.paymentform-modal h2 {
+  text-align: center;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.paymentform-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.paymentform-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s;
+  box-sizing: border-box; /* Important for padding */
+}
+
+.paymentform-group input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+  outline: none;
+}
+
+.attraction-error {
+  color: #d9534f;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  margin-left: 2px;
+}
+
+.paymentform-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.paymentform-buttons button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* Pay Button */
+.paymentform-buttons button[type="submit"] {
+  background-color: #ff4d00;
+  color: white;
+}
+
+.paymentform-buttons button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.paymentform-buttons button[type="submit"]:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+/* Cancel Button */
+.paymentform-cancel {
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd !important;
+}
+
+.paymentform-cancel:hover {
+  background-color: #e2e6ea;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

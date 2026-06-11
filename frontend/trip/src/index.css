@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+
+}
+
+
+:root {
+  width: 100vw;
+  --btn1-color: #e74211;
+  --btn1-color-hover: #ad2f08;
+  --btn2-color: #b695fe;
+  --btn2-color-hover: #9362fe;
+  --violet-cl: #7d1dd6;
+  --btn3-color: #ffd600;
+  --white-cl: white;
+  --strong-black-cl: black;
+  --weak-black-cl: #080808;
+  --bx-shadow: rgba(95, 39, 23, 0.68);
+  --transparent-bg-cl: rgba(200, 32, 56, 0.15);
+  --transparent-bg-cl2: rgba(231, 204, 207, 0.5);
+  /* Main Colors: */
+  --Primary-Color: #e74211;
+  --Hover-Color: #ffc7bf;
+
+  --border: rgba(234, 88, 12, 0.15);
+  --Secborder: brown;
+  --input: transparent;
+  --input-background: #fff7ed;
+  --radius: 0.625rem;
+  --backgroundColor: #fef9f5;
+  --SecbackgroundColor: #ffd7a8;
+  --ThirdBc: #fff7ed;
+
+}
+
+#root {
+  overflow-x: clip;
+}
+
+body {
+  background: url(./landingPage/images/bg.jpg);
+  line-height: 1.5;
+  font-family: 'poppins', sans-serif;
+
+}
+
+.PrimaryB {
+  padding: min(10px, 1%) 15px;
+  font-size: 16px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  color: white;
+  background-color: var(--btn1-color);
+  border: solid 2px var(--btn1-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.1s;
+
+
+}
+
+.SecondaryB {
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  background-color: var(--input-background);
+  border: solid 2px var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+
+.PrimaryB:hover {
+  background-color: var(--btn1-color-hover);
+
+}
+
+/*Containers-----------------------------------------------*/
+.S_Container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
+.FlexH_spaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.FlexV {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 5px;
+}
+
+.FlexV_spaceBetween {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+
+}
+
+.FlexH {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.Section {
+  border-radius: var(--radius);
+  background-color: var(--backgroundColor);
+  border: 2px solid var(--border);
+  padding: 15px 20px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow: auto;
+
+}
+
+.SecHeader {
+  border-bottom: 3px solid var(--Secborder);
+  padding-bottom: 15px;
+  text-wrap: nowrap;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/*Input ---------------------------------------*/
+.CostumeInput {
+  padding: 8px;
+  padding-left: 40px !important;
+  font-size: 1em;
+  border-radius: var(--radius) !important;
+  border: 2px solid var(--border) !important;
+  background-color: var(--input-background) !important;
+  width: 100%;
+  transition: 0.2s;
+}
+
+.ValidIn {
+  border: 2px solid green !important;
+}
+
+.InvalidIn {
+  border: 2px solid red !important;
+}
+
+.InValid {
+  color: red;
+}
+
+.error {
+  color: red;
+  text-align: left;
+  padding-top: 10px;
+}
+
+.CostumeInput .Icon {
+  animation: SmoothAppear 0.3s;
+}
+
+.CostumeInput:focus {
+  outline: none;
+  border: 2px solid brown;
+  box-shadow: 0px 0px 5px brown;
+}
+
+.CostumeCheckBox {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--Primary-Color);
+  cursor: pointer;
+  user-select: none;
+}
+
+.CostumeCheckBox:hover {
+  filter: brightness(0.9);
+}
+
+.CostumeCheckBox .CostumeInput:focus {
+  border: 2px solid brown;
+  outline: none;
+}
+
+.CostumeLabel {
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.InputContainer div {
+  position: relative;
+}
+
+.InputContainer div>.inputIcon {
+  position: absolute;
+  scale: 1;
+  opacity: 0.8;
+  color: brown;
+  left: 0;
+  top: 50%;
+  translate: 50% -50%;
+
+  animation: SmoothAppear 0.3s;
+  z-index: 5;
+
+
+}
+
+/* Table-----------------------------------------------------*/
+.TableContainer {
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+
+}
+
+.CostumeTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-weight: 500;
+  overflow: auto;
+  position: relative;
+
+
+}
+
+.CostumeTable> :first-child {
+  text-align: left;
+  background-color: var(--ThirdBc);
+
+  border-radius: 15px;
+
+}
+
+.CostumeTable tr {
+  border-bottom: 2px solid var(--border);
+}
+
+.CostumeTable th,
+.CostumeTable td {
+  padding: 10px;
+}
+
+/*Buttons-------------------------------------*/
+
+.ActionsMenu {
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  background-color: white;
+  text-wrap: nowrap;
+  color: black;
+
+  border-radius: var(--radius);
+  border: 3px solid var(--border);
+
+
+  z-index: 1;
+
+  animation: SmoothAppear 0.2s;
+
+}
+
+.SecondaryB:hover {
+  color: brown;
+}
+
+.SecondaryB:hover {
+  background-color: ();
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--btn1-color);
+  border-radius: 15px;
+}
+
+
+
+.Active,
+.Pending,
+.Confirmed,
+.Cancelled {
+  border-radius: var(--radius);
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+
+.Active,
+.Confirmed {
+  background-color: lightgreen;
+  color: green;
+}
+
+.Pending {
+  background-color: coral;
+  color: brown;
+}
+
+.Cancelled {
+  background-color: crimson;
+  color: white;
+}
+
+/*Actions Tooltip-----------------------*/
+
+
+.ActionsMenu {
+
+
+  position: absolute;
+
+  min-width: fit-content;
+  left: 0;
+  bottom: 0;
+  translate: -80% 80%;
+  background-color: white;
+  text-wrap: nowrap;
+  color: black;
+
+  border-radius: var(--radius);
+  border: 3px solid var(--border);
+
+
+  z-index: 1;
+  user-select: none;
+
+  animation: SmoothAppear 0.2s;
+
+}
+
+.ActionsB {
+  font-size: 1.3em;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+
+}
+
+
+.ActionsMenu h4 {
+  text-align: left;
+  border-bottom: 2px solid var(--border);
+  padding: 10px;
+}
+
+.ActionsMenu button {
+  background-color: white;
+  border: none;
+  min-width: 200px;
+  padding: 20px;
+  font-size: 1em;
+}
+
+.ActionsMenu div,
+.ActionsMenu button {
+  padding: 10px 10px;
+}
+
+.ActionsMenu div:hover,
+.ActionsMenu button:hover {
+
+  background-color: var(--Hover-Color);
+  cursor: pointer;
+}
+
+.ActionsMenu .Icon {
+  color: brown;
+}
+
+.ActionsMenu .DeleteC {
+  border-top: 3px solid var(--border);
+  color: red;
+}
+
+@keyframes SmoothAppear {
+
+  0% {
+    scale: 0.3;
+    opacity: 0.2;
+  }
+
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+/*Portal----------------------------------------------*/
+
+/* .SmoothAppear {
+  animation: SmoothAppear 0.3s;
+} */

@@ -1,0 +1,84 @@
+:root {
+    --btn1-color: #e74211;
+    --btn1-color-hover: rgba(231, 66, 17, 90%);
+    --btn2-color: #b695fe;
+    --btn2-color-hover: #9362fe;
+    --violet-cl: #7d1dd6;
+    --btn3-color: #ffd600;
+    --white-cl: white;
+    --strong-black-cl: black;
+    --weak-black-cl: #080808;
+    --bx-shadow: rgba(95, 39, 23, 0.68);
+    --transparent-bg-cl: rgba(200, 32, 56, 0.15);
+}
+
+.Banner {
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid black;
+}
+
+.WMessage {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    z-index: 2;
+    gap: 20px;
+    padding-left: 50px;
+}
+
+.WMessage h1 {
+    font-size: 4em;
+}
+
+.WMessage .BannerIc{
+    font-size: 12em;
+    opacity: 0.7;
+}
+
+.Banner p {
+    font-size: 1.2em;
+}
+
+.Banner span {
+
+    color: var(--btn1-color);
+}
+
+.SidePic {
+    position: relative;
+}
+
+.sidePlane {
+
+    width: 40%;
+    height: 100%;
+    z-index: 1;
+}
+
+@keyframes Pop {
+    0% {}
+
+    50% {
+        transform: translateY(-10%);
+        opacity: 0.9;
+    }
+
+    100% {}
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .sidePlane{
+        display: none;
+    }
+    .WMessage h1{
+        font-size: 2.5em;
+    }
+    .WMessage .BannerIc{
+        font-size: 9em;
+        color:black;
+
+    }
+}

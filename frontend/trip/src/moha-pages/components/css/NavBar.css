@@ -1,0 +1,126 @@
+/* NAVBAR WRAPPER */
+#navbar {
+  width: 100%;
+  background: white;
+  border-bottom: 2px solid #eee;
+  padding: 15px 25px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* NAV CONTENT (flex container) */
+#navbar > #nav-content {
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+#navbar > #nav-content > #nav-logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #e74211;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* NAV LIST */
+#navbar > #nav-content > #navbar-list {
+  display: flex;
+  gap: 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* NAV ITEMS */
+#navbar > #nav-content > #navbar-list > .nav-item {
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: 0.2s;
+  color: #333;
+}
+
+/* Individual IDs (optional specific tweaks) */
+#navbar > #nav-content > #navbar-list > #nav-carrental {
+  /* highlight current page lightly */
+  background: rgba(231,66,17,0.06);
+  border-radius: 6px;
+}
+
+/* hover */
+#navbar > #nav-content > #navbar-list > .nav-item:hover {
+  background-color: #e74211;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* SIGN IN BUTTON */
+#navbar > #nav-content > #nav-signin {
+  padding: 8px 20px;
+  background: #e74211;
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.25s;
+  box-shadow: 0 3px 8px rgba(231, 66, 17, 0.3);
+}
+
+/* Signin hover/active */
+#navbar > #nav-content > #nav-signin:hover {
+  background-color: #f1643a;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 5px 12px rgba(231, 66, 17, 0.45);
+}
+#navbar > #nav-content > #nav-signin:active {
+  transform: scale(0.97);
+}
+
+/* RESPONSIVE */
+/* medium screens */
+@media (max-width: 850px) {
+  #navbar > #nav-content > #navbar-list {
+    gap: 12px;
+  }
+
+  #navbar > #nav-content > #navbar-list > .nav-item {
+    padding: 6px 10px;
+    font-size: 0.95rem;
+  }
+
+  #navbar > #nav-content > #nav-signin {
+    padding: 7px 14px;
+    font-size: 0.9rem;
+  }
+}
+
+/* small screens: stack */
+@media (max-width: 600px) {
+  #navbar > #nav-content {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  #navbar > #nav-content > #navbar-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 6px 0;
+  }
+
+  #navbar > #nav-content > #nav-signin {
+    align-self: center;
+    padding: 6px 12px;
+  }
+}

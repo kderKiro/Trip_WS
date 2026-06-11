@@ -1,0 +1,40 @@
+.TourRating {
+
+    padding: 8px;
+    border-radius: var(--radius);
+    color: brown;
+    background-color: var(--SecbackgroundColor);
+    font-weight: 600;
+
+}
+
+.TourRating .Icon {
+
+    color: var(--Primary-Color);
+}
+
+
+.Highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    font-weight: 500;
+    padding: 0px 10px;
+
+}
+.Highlights .Highlight{
+    background-color: var(--ThirdBc);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    border-radius: var(--radius);
+
+}
+.Highlights .Icon{
+    color: var(--Primary-Color);
+}
+.Highlights p{
+    display: inline;
+    text-align: center;
+}

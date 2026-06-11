@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --btn1-color: #e74211;
+    --btn1-color-hover: #f1643a;
+    --btn2-color: #b695fe;
+    --btn2-color-hover: #9362fe;
+    --violet-cl: #7d1dd6;
+    --btn3-color: #ffd600;
+    --white-cl: white;
+    --strong-black-cl: black;
+    --weak-black-cl: #080808;
+    --bx-shadow: rgba(95, 39, 23, 0.68);
+    --transparent-bg-cl: rgba(200, 32, 56, 0.15);
+    --transparent-bg-cl2: rgba(100, 75, 80, 0.2);
+    --shadow: rgba(211, 107, 10, 0.822);
+}
+
+.input-field.invalid {
+    border: 1px solid red;
+}
+
+.input-field.valid {
+    border: 1px solid #4caf50;
+}
+
+.error-text {
+    color: red;
+    font-size: 0.85rem;
+}
+
+
+.car-rental-form {
+    width: clamp(200px, 60vw, 700px);
+    margin: 0 min(1vw, auto);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: linear-gradient(135deg, var(--btn1-color-hover), var(--transparent-bg-cl2), var(--btn1-color));
+}
+
+#btn-form-car {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.car-rental-form>#btn-form-car>button[type='submit'] {
+    background-color: var(--btn1-color-hover);
+    color: var(--white-cl);
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    font-size: min(15px, 4vw);
+    font-weight: 600;
+    padding: min(8px, 4vh) min(13px, 3vw);
+}
+
+.car-rental-form>#btn-form-car>button[type='submit']:hover {
+  transition: 0.4s;
+  transform: scale(1.03);
+  box-shadow: 0 5px 6px 3px var(--bx-shadow);
+  background-color: var(--white-cl);
+  color: var(--btn1-color);
+}
+
+.car-rental-form>#btn-form-car>button[type='submit']:active{
+    transition: none;
+    transform: scale(0.98);
+    box-shadow: none;
+    background-color: var(--btn1-color-hover);
+    color: var(--white-cl);
+}
+
+/* Each form field container */
+.car-rental-form>.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.car-rental-form>.form-group>.car-fpart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.car-rental-form>.form-group>.car-fpart>select{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Inputs and selects inside .form-group only */
+.form-group input,
+.form-group select {
+    width: 100%;
+    /* full width but controlled */
+    /* ensures no overflow */
+    height: 42px;
+    /* clean, uniform height */
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+
+
+/* Validation error message */
+.error-message {
+    color: red;
+    font-size: 0.85rem;
+    min-height: 18px;
+    /* keeps spacing even */
+    display: block;
+}
+
+/* Submit button */
+.car-rental-form button {
+    width: 150px;
+    height: 42px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    /* input and label side-by-side */
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-group input,
+.form-group select {
+    
+    flex: 1;
+    outline: none;
+    /* input stays wide */
+}
+
+.form-group input[type=number]::-webkit-inner-spin-button {
+    display: none;
+}
+
+.form-group label {
+    width: min(14vw, 140px);
+    /* label on the right */
+    text-align: left;
+    cursor: pointer;
+    font-size: clamp(12px, 3vw, 15px);
+}
+
+#pickupDate {
+    width: 100%;
+    /* full width but controlled */
+    max-width: 100%;
+    /* ensures no overflow */
+    height: 42px;
+    /* clean, uniform height */
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+#dropoffDate {
+    width: 100%;
+    /* full width but controlled */
+    max-width: 100%;
+    /* ensures no overflow */
+    height: 42px;
+    /* clean, uniform height */
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+@media (max-width:500px) {
+    .car-rental-form>.form-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+    }
+}

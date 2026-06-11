@@ -1,0 +1,242 @@
+@import url(../index.css);
+
+.Container {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    transition: 0.5s ease-in-out;
+
+}
+
+.Container.Closed {
+
+    grid-template-columns: 80px 1fr;
+}
+
+.SideBar {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.SideBar ul {
+    list-style-type: none;
+}
+
+.MenuHead {
+    display: flex;
+    padding: 10px;
+    border-bottom: 5px solid var(--btn1-color);
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.MenuHead h2 {
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+.SButton {
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    transition: 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.SButton:hover {
+    background-color: rgba(128, 128, 128, 0.15);
+}
+
+
+.Menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 90vh;
+
+}
+
+.Menu ul {
+    font-size: 1.1em;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    letter-spacing: 1px;
+    text-wrap: none;
+    overflow-x: hidden;
+    transition: 0.5s;
+
+}
+
+
+.Menu::-webkit-scrollbar-thumb {
+    background-color: var(--Hover-Color);
+}
+
+.Menu::-webkit-scrollbar {
+    width: 5px;
+}
+
+.MainLink,
+.SubLink {
+    user-select: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.MainLink>p {
+    flex-grow: 1;
+    text-wrap: nowrap;
+}
+
+.MainLink {
+    padding: 15px;
+    transition: 0.1s ease-in-out;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+
+}
+
+.MainLink.active {
+    color: white;
+    background-color: var(--btn1-color);
+
+}
+
+.MainLink:hover:not(.active) {
+    background-color: var(--Hover-Color);
+
+}
+
+
+
+
+
+/* .SubMenuToogle {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.SubMenuToogle.Rotate {
+    transform: rotate(180deg);
+} */
+
+.ToogleMenu {
+    color: black;
+}
+
+@keyframes Flip {
+    from {}
+
+    to {
+        transform: rotateY(180deg);
+    }
+}
+
+/* @keyframes Rotate {
+    from {}
+
+    to {
+        transform: rotate(180deg);
+    }
+} */
+
+.MainWindow {
+    overflow: auto;
+}
+
+.SubMenu {
+
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 300ms ease-in-out;
+
+    >div {
+        overflow: hidden;
+    }
+}
+
+.SubMenu.Show {
+    grid-template-rows: 1fr;
+}
+
+.BottomMenu {
+    border-top: 1px solid grey;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1000px) {
+    .MenuHead {
+        display: none;
+    }
+    .Menu p {
+        display: none;
+    }
+
+    .Container {
+        grid-template-columns: 80px 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .SideBar {  
+        position: fixed;
+        height: fit-content;
+        z-index: 100;
+        width: 100%;
+        top: auto;
+        bottom: 0;
+        border-top-left-radius: 30%;
+        border-top-right-radius: 30%;
+
+
+
+    }
+
+    .Menu {
+        flex-direction: row;
+        height: fit-content;
+        justify-content: center;
+    }
+
+    .Menu p {
+        display: none;
+    }
+
+    .Menu ul {
+        flex-direction: row;
+    }
+
+    .BottomMenu {
+        border-top: none;
+    }
+
+    .MainWindow {
+        order: 1;
+        padding-bottom: 80px;
+    }
+
+}

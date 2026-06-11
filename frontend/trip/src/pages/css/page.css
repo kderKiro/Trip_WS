@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+@keyframes typing {
+
+  from  { 
+   width: 0;
+  }
+
+  to { 
+    width: 100%;
+  }
+  
+}
+
+@keyframes blink { 
+  50% { 
+    border-color: transparent;
+  }
+}
+
+:root {
+  --btn1-color: #e74211;
+  --btn1-color-hover: #f1643a;
+  --btn2-color: #b695fe;
+  --btn2-color-hover: #9362fe;
+  --violet-cl: #7d1dd6;
+  --btn3-color: #ffd600;
+  --white-cl: white;
+  --strong-black-cl: black;
+  --weak-black-cl: #080808;
+  --bx-shadow: rgba(95, 39, 23, 0.68);
+  --transparent-bg-cl: rgba(200, 32, 56, 0.15);
+  --transparent-bg-cl2: rgba(100, 75, 80, 0.2);
+}
+
+.Show {
+  /* border: 1px solid black; */
+  border-radius: 20px;
+  width: 98vw;
+  height: 30vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px auto;
+}
+
+.output {
+  border-radius: 20px;
+  width: min(90%, 1200px);
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 300px;
+}
+
+.search {
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  z-index: 100;
+  min-width: 0;
+  overflow-x: hidden;
+  padding: 0 1rem;
+}
+
+.outputarea {
+  width: 100%;
+  max-width: 1200px;
+  margin: 1.5rem auto 2rem;
+  padding: 2rem;
+  border-radius: 10px;
+  color: var(--white-cl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+
+
+.container {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  min-height: 55vh;
+  margin: 0;
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 55vh;
+  min-height: 350px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+  border-radius: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.slide:hover img {
+  transform: scale(1.03);
+}
+
+/* Always-visible bottom gradient for depth & nav visibility */
+.slide::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.5),
+    transparent
+  );
+  pointer-events: none;
+}
+
+.pic-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.3) 40%,
+    rgba(0, 0, 0, 0.05) 70%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem 1.75rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  pointer-events: none;
+}
+
+.pic-overlay h2 {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.slide:hover .pic-overlay {
+  opacity: 1;
+}
+
+.slider-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 50px;
+}
+
+.slider-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+.slider-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  transform: scale(1.2);
+}
+
+
+.top-hotels {
+  margin: 5px;
+  width: 98vw;
+  border-radius: 10px;
+  /*  background: url('../pics/pexels-sebastian-189349.jpg');
+  background-size: cover;  */
+  font-family: "BBH Sans Hegarty", sans-serif;
+  white-space: nowrap;
+}
+
+.second-section h1{ 
+ background-color: white;
+ margin: 10px auto;
+  text-align: center;
+  width: 80%;
+  border-radius: 2rem;
+  background-color: var(--btn1-color);
+  color: white;
+  margin-inline: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 1px solid;
+ /* animation: typing 5s steps(18) forwards infinite, blink 1s step-end infinite; */
+}
+
+.icon { 
+  width : 25px;
+  height: auto;
+}
+
+.header { 
+  color: black ;
+  background: none;
+  border-bottom: 2px solid black;
+  border-radius: 20px;
+  width: 300px; 
+  padding : 10px;
+  text-align: center;
+  margin: 10px auto;
+  white-space: nowrap;
+  font-size: 1.4rem;
+  box-shadow: 5px 5px 5px black;
+}
+
+.header:hover { 
+  scale: 1.05;
+  background-color: var(--btn1-color);
+  color: white;
+  transition-duration: 0.3s;
+}
+
+/* Flights page responsive */
+@media (max-width: 768px) {
+  .search {
+    margin-top: 2rem;
+  }
+
+  .outputarea {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .slider-wrapper {
+    min-height: 45vh;
+    padding: 0;
+  }
+
+  .slider {
+    height: 45vh;
+    min-height: 280px;
+    border-radius: 0;
+  }
+
+  .pic-overlay h2 {
+    font-size: 0.85rem;
+  }
+
+  .slider-nav {
+    padding: 0.4rem 0.75rem;
+    bottom: 1rem;
+  }
+
+  .slider-nav a {
+    width: 0.45rem;
+    height: 0.45rem;
+  }
+
+  .header {
+    font-size: 1.1rem;
+    padding: 8px 16px;
+  }
+}
+
+/* --- Modal Overlay (Black Background) --- */
+.flight-payment-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark see-through background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Stays on top of everything */
+}
+
+/* --- Modal Box --- */
+.flight-payment-modal {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    color: #333;
+}
+
+/* --- Close Button --- */
+.flight-payment-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+/* --- Form Styles --- */
+.flight-payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.flight-payment-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+}
+
+.flight-payment-input.error {
+    border-color: red;
+}
+
+.flight-payment-row {
+    display: flex;
+    gap: 10px;
+}
+
+/* --- Pay Button --- */
+.flight-pay-btn {
+    background-color: #2e74c8; /* Match your theme color */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.flight-pay-btn:hover {
+    background-color: #1a5494;
+}
+
+

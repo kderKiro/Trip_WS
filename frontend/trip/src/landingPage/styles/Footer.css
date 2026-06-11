@@ -1,0 +1,140 @@
+@import url(../../index.css);
+
+#myFooter {
+  background-color: var(--transparent-bg-cl);
+  padding: 15px min(100px, 10vw);
+  width: 100vw;
+  margin: 0;
+}
+
+footer>.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: min(250px,2vh);
+  padding-top: 15px;
+}
+
+footer .footer .social-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+}
+
+footer>.footer>.social-contact>.slogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-left: 15px;
+}
+
+.icons>a {
+  padding: 2px;
+  border-radius: 50%;
+  border: 2px solid var(--btn1-color);
+  color: var(--btn1-color);
+  align-items: center;
+  justify-content: center;
+}
+
+.icons>a:hover {
+  border: 2px solid transparent;
+  background-color: var(--btn1-color);
+  color: var(--white-cl);
+  box-shadow: 0px 2px 3px 2px var(--bx-shadow);
+  transition: 0.3s;
+  transform: translateY(-4px);
+}
+
+.icons>a:active {
+  border: 2px solid transparent;
+  background-color: var(--btn1-color);
+  color: var(--white-cl);
+  box-shadow: none;
+  transition: 0s;
+  transform: translateY(0px);
+}
+
+footer>.footer>.social-contact>.icons>a>i {
+  margin-top: 4px;
+  font-size: 20px;
+}
+
+footer.footer>.social-contact>.slogo>img,
+h1 {
+  width: 25px;
+  font-size: min(10vw,25px);
+}
+
+.information {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.page-sections {
+  font-size: 14px;
+}
+
+.page-sections>p {
+  width: fit-content;
+  border-bottom: 1.2px solid transparent;
+}
+
+.page-sections>p:hover {
+  color: var(--btn1-color);
+  border-bottom: 1.2px solid var(--btn1-color);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.page-sections>p:active {
+  color: var(--btn1-color);
+  border-bottom: 1.2px solid transparent;
+  transition: 0s;
+  transform: scale(0.96);
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-details>a {
+  color: gray;
+  text-decoration: none;
+  font-size: min(16px ,4vw);
+}
+
+.contact-details>a:hover {
+  color: gray;
+  color: var(--btn1-color);
+}
+
+#copyright {
+  margin: 10px 0 0;
+  text-align: center;
+}
+
+@media (max-width:770px) {
+  footer>.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

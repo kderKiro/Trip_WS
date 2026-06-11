@@ -1,0 +1,99 @@
+@import url(../../../../index.css);
+
+.ann-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: min(40px, 10vw);
+  padding-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+
+}
+
+.ann-section .txt-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ann-section .txt-content h1 {
+  font-size: clamp(1.2rem, 3vw, 1.9rem);
+  width: 100%;
+}
+
+.typed {
+  color: black;
+}
+
+.typed-cursor {
+  color: var(--btn1-color);
+}
+
+.ann-section .txt-content p {
+  font-size: 14.5px;
+  width: 100%;
+}
+
+.ann-section .txt-content button {
+  cursor: pointer;
+  border-radius: 20px;
+  padding: min(8px, 8%) min(15px, 10%);
+  background-color: var(--btn1-color);
+  color: var(--white-cl);
+  border: 2px solid transparent;
+  outline: none;
+  font-size: min(15px, 3vw);
+  font-weight: 600;
+}
+
+.ann-section>.txt-content>button:hover {
+  background-color: transparent;
+  color: var(--btn1-color);
+  border: 2px solid var(--btn1-color);
+  transition: all 0.4s ease-in;
+}
+
+.ann-section>.txt-content>button:active {
+  background-color: var(--btn1-color);
+  transform: translateX(0px);
+  box-shadow: none;
+  transition: 0s;
+  color: var(--white-cl);
+}
+
+.ann-section>img {
+  width: clamp(200px, 40vw, 400px);
+  animation: smooth-mooving 2s infinite;
+}
+
+@keyframes smooth-mooving {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width:600px) {
+  .ann-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ann-section>.txt-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

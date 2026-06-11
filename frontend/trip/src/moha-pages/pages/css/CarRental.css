@@ -1,0 +1,87 @@
+.carrental-main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+/* FORM WRAPPER */
+.carrental-form-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* CARDS CONTAINER */
+.carrental-cards-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.carrental-scroll-h1 {
+  display: block;
+  width: fit-content;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 auto 20px auto;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease, background-color 0.3s ease;
+  white-space: nowrap;
+  padding: 15px 30px;
+  background-color: #ff5722;
+  border: 3px solid #ff9100;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* مسافة بين الأيقونة والنص */
+}
+
+/* أيقونة السيارة */
+.carrental-h1-icon svg {
+  vertical-align: middle;
+  fill: #ffffff;
+  transition: fill 0.3s ease;
+}
+
+/* Hover animation */
+.carrental-scroll-h1:hover {
+  color: #ff9100;
+  transform: scale(1.1);
+  text-shadow: 0 0 10px #ff9100, 0 0 20px #ff5722;
+  background-color: #ff7043;
+}
+
+.carrental-scroll-h1:hover .carrental-h1-icon svg {
+  fill: #ff9100; /* الأيقونة تغير لونها عند hover */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carrental-scroll-h1 {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+  }
+  .carrental-h1-icon svg {
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .carrental-scroll-h1 {
+    font-size: 1.2rem;
+    padding: 8px 16px;
+  }
+  .carrental-h1-icon svg {
+    width: 1.2em;
+    height: 1.2em;
+  }
+}

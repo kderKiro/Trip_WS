@@ -1,0 +1,102 @@
+.parent {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: repeat(3, 1fr);
+
+    grid-auto-flow: dense;
+
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+.parent>div {
+    background-color: white;
+    height: auto;
+}
+
+.div1 {
+    grid-row: 1 / span 2;
+}
+
+.Upload {
+    border: 3px dashed var(--border);
+    border-radius: var(--radius);
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0px;
+
+    transition: 0.1s;
+
+    cursor: pointer;
+
+}
+
+.Upload:hover {
+    background-color: var(--input-background);
+    border: 3px solid var(--border);
+}
+
+.Upload .Icon {
+    font-size: 6em;
+    color: var(--Primary-Color);
+}
+
+.Upload p {
+    color: brown;
+}
+
+.Inclusion .Icon {
+
+    color: var(--Primary-Color);
+}
+
+.TourStat {
+    padding: 20px;
+    border-radius: var(--radius);
+    background-color: white;
+
+}
+.TourStat p{
+    text-align: center;
+    font-weight: 600;
+}
+/*Dates--------------------------*/
+.DateIcon{
+
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: var(--radius);
+    color: var(--Primary-Color);
+    background-color: var(--input-background);
+    border: 2px solid var(--border);
+
+}
+.Spots{
+    font-size:small;
+    text-align: center;
+    font-weight: bold;
+    padding: 3px;
+    background-color: lightblue;
+    color: white;
+
+    border-radius: var(--radius);
+}
+
+@media screen and (max-width:800px) {
+    .parent{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width:600px){
+    
+    .DatesForm{
+        flex-direction: column !important;
+    }
+}
+@media screen and (max-width:400px) {
+    .parent{
+        font-size: 0.8em;
+    }
+}

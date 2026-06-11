@@ -1,0 +1,150 @@
+.Hotel {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.HotelDetails {
+
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    gap: 10px;
+
+
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--border);
+}
+
+
+.HotelDetails .CardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 2px solid var(--border);
+
+}
+
+.Location,.TourDuration {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: rgba(165, 42, 42, 0.8);
+    font-weight: 500;
+}
+
+.Rating {
+    background-color: var(--Primary-Color);
+    color: white;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: var(--radius);
+}
+
+
+.Price {
+    display: inline;
+    font-weight: bold;
+    text-align: left;
+}
+
+.Price>span {
+    color: green;
+}
+
+
+
+
+
+.stars {
+    color: var(--btn1-color);
+}
+
+.stars span {
+    color: rgba(128, 128, 128, 0.5);
+}
+
+.Hotel>img {
+    border-radius: var(--radius);
+    width: 400px;
+}
+
+
+.Amenities {
+    display: flex;
+    gap: 5px;
+}
+
+.Amenitie,
+.NightsRes>p {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+    padding: 5px;
+    background-color: var(--SecbackgroundColor);
+    color: brown;
+    border-radius: var(--radius);
+    font-size: 0.8em;
+
+
+}
+
+.Res_info {
+    display: flex;
+    gap: 10px;
+}
+
+.Res_info p {
+    font-weight: 500;
+}
+
+
+
+.HStatus {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.DateIn,
+.DateOut {
+    text-align: center;
+    flex-grow: 0.5;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    .Hotel,
+    .HotelDetails,
+    .CardHeader {
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .stars {
+        text-align: center;
+    }
+}
+@media screen and ( max-width:600px) {
+    .Hotel{
+        font-size: 0.9em;
+    }
+    .Amenities{
+        font-size: 0.7em;
+    }
+}
+@media screen and (max-width:350px){
+    .Hotel{
+        font-size: 0.6em;
+    }
+}

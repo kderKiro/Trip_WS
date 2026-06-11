@@ -1,0 +1,165 @@
+@import url('../../index.css');
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(../images/airport.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: fit-content;
+  padding: min(100px, 15vh) min(100px, 15vw);
+  gap: 10px;
+  width: 100vw;
+  border-style: none;
+}
+
+.main-page>p:first-child {
+  font-size: clamp(1.4rem, 6vw, 3rem);
+  width: min(700px, 70vw);
+  font-weight: bold;
+  text-align: center;
+  color: var(--white-cl);
+}
+
+.main-page>p:nth-child(2) {
+  font-size: clamp(13px, 4vw, 15px);
+  font-weight: 600;
+  text-align: center;
+  color: var(--white-cl);
+}
+
+.main-page>button {
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 8px 15px;
+  background-color: var(--btn1-color);
+  color: var(--white-cl);
+  border: none;
+  outline: none;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.main-page>button>i {
+  font-size: 25px;
+  font-weight: 100;
+  opacity: 0.8;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.main-page>button:hover {
+  background-color: var(--btn1-color-hover);
+  transform: translateX(3px);
+  box-shadow: -3px 1px 3px 3px var(--bx-shadow);
+  transition: 0.4s;
+}
+
+.main-page>button:hover>i {
+  opacity: 1;
+  font-weight: 600;
+  transform: translateX(6px);
+}
+
+.main-page>button:active {
+  background-color: var(--btn1-color);
+  transform: translateX(0px);
+  box-shadow: none;
+  transition: 0s;
+}
+
+.main-page>.popular-places-tit {
+  margin: min(70px, 8vh) auto min(20px, 8vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-page>.popular-places-tit>span {
+  font-size: clamp(0.6rem, 4vw, 1.2rem);
+  line-break: auto;
+  display: inline-block;
+  font-weight: 700;
+  color: var(--white-cl);
+}
+
+hr {
+  display: inline-block;
+  width: 20vw;
+  border: none;
+  border-top: 2px solid var(--btn1-color);
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: min(20px, 5vw);
+}
+
+.images>img {
+  width: clamp(150px, 20%, 400px);
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 20%;
+  cursor: pointer;
+}
+
+.images>img:hover {
+  scale: 1.03;
+  transition: 0.3s;
+}
+
+.review-div{
+  width: 100vw;
+  padding: min(72px, 8%) min(100px, 8%);
+  
+}
+
+.review {
+  padding: min(72px, 8%) min(100px, 8%);
+  background-color: var(--transparent-bg-cl);
+  border-radius: 5vw;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+}
+
+.review>li {
+  width: clamp(100px, 20vw, 170px);
+}
+
+.review>li>h1 {
+  font-size: clamp(1rem, 4vw, 2rem);
+  font-weight: bold;
+  overflow: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.review>li>h1>small {
+  font-size: clamp(11px, 2vw, 13px);
+  font-weight: 100;
+  overflow: none;
+}
+
+@media (max-width:600px) {
+  .main-page>.popular-places-tit {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,102 @@
+@import url('../../../../index.css');
+
+.client-op {
+  display: grid;
+  width: 100vw;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  justify-content: center;
+  padding: min(100px, 15vh) min(100px, 15vw);
+  gap: 20px;
+}
+
+.client-op>.text-comp {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: min(15px, 8vw);
+  flex-direction: column;
+  position: relative;
+}
+
+.client-op>.text-comp>p {
+  color: var(--btn1-color);
+  text-indent: min(20px, 10%);
+  font-size: clamp(12px, 2vw, 1rem);
+  width: 100%;
+}
+
+.client-op>.text-comp>h1 {
+  width: 100%;
+  font-size: clamp(1rem, 3vw, 2.2rem);
+}
+
+.client-op>img {
+  width: clamp(220px, 40vw, 400px);
+  object-fit: cover;
+  aspect-ratio: 9/6;
+  border-radius: 50px;
+}
+
+.client-op>.text-comp>button {
+  font-size: min(15px, 3vw);
+  font-weight: 600;
+  padding: min(8px, 6%) min(15px, 8%);
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 75%;
+  left: 65%;
+  color: var(--white-cl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--btn1-color), var(--btn1-color-hover));
+}
+
+.client-op>.text-comp>button>#flesh-btn {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: min(20px, 3vw);
+}
+
+.client-op>.text-comp>button:hover {
+  transition: 0.3s;
+  transform: translateX(10px);
+  box-shadow: -10px 2px 12px 2px var(--bx-shadow);
+}
+
+.client-op>.text-comp>button:active {
+  transition: 0s;
+  transform: translateX(0px);
+  box-shadow: none;
+}
+
+.client-op>.text-comp>button:hover>#flesh-btn {
+  color: var(--white-cl);
+  transition: 0.3s;
+  transform: translateX(4px);
+}
+
+img[alt=pers] {
+  width: clamp(30px, 11vw, 50px);
+  object-fit: cover;
+  aspect-ratio: 9/6;
+}
+
+img[alt=star] {
+  width: clamp(30px, 10vw, 40px);
+  object-fit: cover;
+  aspect-ratio: 9/6;
+}
+
+@media (max-width:1018px) {
+  .client-op {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}

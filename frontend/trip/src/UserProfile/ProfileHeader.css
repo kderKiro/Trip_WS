@@ -1,0 +1,38 @@
+
+
+
+* {
+    font-family: Montserrat;
+}
+
+.ProfileHaeder {
+
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    padding: min(15px,2%) 20px ;
+    border-bottom:5px solid var(--btn1-color);
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 0;
+
+}
+
+
+.Profile_Username {
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+}
+
+.Profile_Username .P-Type {
+    color: #e74311e3;
+}
+
+.Profile_Username>div {
+    text-align: center;
+    font-weight: bold;
+}
+
+

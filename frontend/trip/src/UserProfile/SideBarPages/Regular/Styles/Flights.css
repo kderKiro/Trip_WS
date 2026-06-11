@@ -1,0 +1,228 @@
+@import url(../../../../index.css);
+
+.Flights {
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.FlightCard {
+
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+
+}
+
+.FlightIcon {
+    font-size: 2.5em;
+    padding: 15px;
+    color: white;
+    background-color: var(--btn1-color);
+    border-radius: var(--radius);
+}
+
+.Icon_Flight_Details {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.FlightTimeDescription {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 100px;
+    flex-grow: 0.3;
+
+
+}
+
+.FlightTimeDescription .Location_Description {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    text-wrap: nowrap;
+    position: relative;
+
+}
+
+.FlightTimeDescription .Location_Description .Airport {
+    color: brown;
+}
+
+
+
+
+.FlightTimeDescription .Stops {
+    padding: 4px;
+    color: rgba(165, 42, 42, 0.9);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    height: fit-content;
+    background-color: var(--SecbackgroundColor);
+    transform: translateY(4px);
+
+}
+
+.FlightTimeDescription .Duration {
+    color: brown;
+    position: relative;
+    z-index: 1;
+
+}
+
+.Duration>.Icon {
+    background-color: white;
+}
+
+.FlightTimeDescription .Location_Description>hr {
+
+
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    top: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    height: 2px;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+
+
+
+.FlightTimeDescription .Duration>p {
+
+    color: rgba(0, 0, 0, 0.5);
+
+
+}
+
+
+
+
+
+
+
+
+.FlightTimeDescription>hr {
+
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    top: 60%;
+
+}
+
+.FullCircle1,
+.EmptyCircle,
+.FullCircle2 {
+
+    width: 12px;
+    height: 12px;
+    border: 3px solid brown;
+    border-radius: 50%;
+    position: absolute;
+
+}
+
+.FullCircle1,
+.FullCircle2 {
+    background-color: brown;
+}
+
+.FullCircle1 {
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+.FullCircle2 {
+    top: 60%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.EmptyCircle {
+    background-color: var(--backgroundColor);
+    top: 60%;
+    left: 50%;
+    color: transparent;
+    translate: -100% -50%;
+}
+
+
+
+.Price,
+.Class,
+.Status,
+.Airline {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.Price>p {
+    color: green;
+}
+
+.Class>.Economy {
+    background-color: crimson;
+}
+
+.Class>.Business {
+    background-color: deepskyblue;
+}
+
+.Class>.First-Class {
+    background-color: green;
+}
+
+.Class>div,
+.Active,
+.Pending {
+    border-radius: var(--radius);
+    color: white;
+    padding: 5px 7px;
+
+}
+.FlightResInfo div{
+    text-align: center;
+}
+
+
+@media screen and (max-width:1000px) {
+
+    .FlightCard,
+    .Icon_Flight_Details {
+        flex-direction: column;
+    }
+
+    .FlightTimeDescription {
+        width: 100%;
+    }
+
+    .FlightCard {
+        gap: 20px;
+    }
+    .FlightResInfo{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+
+    .FlightTimeDescription {
+        font-size: 0.8em;
+        width: fit-content;
+    }
+}
