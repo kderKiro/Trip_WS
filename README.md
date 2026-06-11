@@ -4,7 +4,7 @@ A web platform that connects travel agencies and customers, allowing agencies to
 
 ## Live Demo
 
-https://full-trip.onrender.com
+https://full-trip-ws-i6fv.onrender.com
 
 ## Features
 
